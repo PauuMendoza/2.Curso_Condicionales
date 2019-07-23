@@ -17,22 +17,24 @@ import javax.swing.JOptionPane;
  * **Si trabaja mas de 40 horas se le pagan $16 por cada una de las primeras
  * 40 horas Y $20 por cada hora extra.
  */
-public class E5_SalarioObrero {
+public class E5_SalarioObrero_IF {
     
     public static void main(String[] args) {
         
-        int salary;
+        int salary, extraHours;
         
-        int hours = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the hours worked"));
+        int hours = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the hours worked", "WORKER`S SALARY", JOptionPane.INFORMATION_MESSAGE));
         
         if(hours <= 40){
            salary = hours * 16;
             
-            JOptionPane.showMessageDialog(null, "Your salary es: "+ salary);
+            JOptionPane.showMessageDialog(null, "Your salary es: $"+ salary, "WORKER`S SALARY", JOptionPane.INFORMATION_MESSAGE);
         }else{
-            hours *= 16;
-            salary = (hours * 16) + 20;
-            JOptionPane.showMessageDialog(null, "Your salary es: "+ salary);
+            
+            extraHours = hours - 40;
+            hours = 40*16 + (extraHours * 20);
+              
+            JOptionPane.showMessageDialog(null, "Your salary es: $"+hours, "WORKER`S SALARY", JOptionPane.INFORMATION_MESSAGE);
      
         }
         
