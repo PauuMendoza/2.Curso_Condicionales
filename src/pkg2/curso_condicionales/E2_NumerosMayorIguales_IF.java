@@ -23,7 +23,7 @@ public class E2_NumerosMayorIguales_IF {
     if(num1>num2){
         
          JOptionPane.showMessageDialog(null, "The number "+ num1+" is greater than number "+ num2);
-    }else if(num2>num2){
+    }else if(num2>num1){
         JOptionPane.showMessageDialog(null, "The number "+ num2+" is greater than number "+ num1);
         
     }else{

@@ -14,23 +14,25 @@ import javax.swing.JOptionPane;
  * Analizis encontrado y no pensado es que diviendo el numero / 10 puedo saber
  * el numero de las cifras, 
  */
-public class E8_CifrasDeNumero {
+public class E8_CifrasDeNumero_While {
     
     public static void main(String[] args) {
         int cifras=0;
         
-        int num = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter a number: "));
-        
+        int num = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter a number: ", "FIGURES", JOptionPane.INFORMATION_MESSAGE));
+        if(num<=99999){
         while(num!=0){
             num/=10;
             cifras++;
             
         }
         
-        System.out.println("El numero tiene estas cifras " +cifras);   
+        JOptionPane.showMessageDialog(null, cifras+" figures", "FIGURES", JOptionPane.INFORMATION_MESSAGE);
         
-        
+        }else{
+            JOptionPane.showMessageDialog(null, "Enter a number that figures max is 5");
+        } 
         
     }
     
-}//todavia queda pendiente
+}
